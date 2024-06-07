@@ -51,8 +51,8 @@ func (s *Server) Run() {
 	serv := &http.Server{
 		Addr:           ":9000",
 		Handler:        s.router,
-		ReadTimeout:    10 * time.Second,
-		WriteTimeout:   10 * time.Second,
+		ReadTimeout:    1 * time.Second,
+		WriteTimeout:   1 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
 	quit := make(chan os.Signal)
